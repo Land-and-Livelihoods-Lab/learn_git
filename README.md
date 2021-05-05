@@ -1,109 +1,159 @@
 # Learning git
 
-## 1. Read the following documents and install git:
+## 1. Read the documents below and install git on your computer.
 
-About version control
+About version control:
+
 http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
 
-Installing git
+Installing git:
+
 http://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 https://github.com/git-guides/install-git
 
-All of Chapter 2 - Git basics
+All of Chapter 2 - Git basics:
+
 http://git-scm.com/book/en/v2
 
-Basic branching and merging
+Basic branching and merging:
+
 http://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 
-## 2. Generate an SSH key and add it to Github. Start here: 
+## 2. Generate SSH key and add it to Github.
+
+Start here:
+
 https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
-## 3. Create a new directory for git projects (e.g., "git_projects").
-
-## 4. In the terminal / command line, go to the new directory.
+## 3. Create a directory for git projects (e.g., "git_projects") and visit in the terminal.
 
 For Linux:
 
-$ cd /home/user/git_projects
+> cd /home/user/git_projects
 
 For macOS:
 
-$ cd /Users/user/git_projects
+> cd /Users/user/git_projects
 
 For Windows:
 
-$ cd C:/Users/user/git_projects
+> cd C:/Users/user/git_projects
 
-## 5. Clone the `learn_git` repository.
+## 4. Clone the `learn_git` repository.
 
-$ git clone git@github.com:temporalecologylab/learn_git.git
+In the terminal type:
+
+> git clone git@github.com:temporalecologylab/learn_git.git
 
 You will not be able to clone this repository until you have uploaded your SSH key to Github.
 
-## 6. In the terminal or your OS's file explorer, confirm that git has cloned this repository to your computer.
+In the terminal or your OS's file explorer, confirm that git has cloned this repository to your computer.
 
-## 7. In the terminal, switch to the `learn_git` folder using "cd" as above (see step 3).
+## 5. In the terminal, switch to `learn_git` folder using "cd" (see step 3).
+
+For example:
+
+> cd learn_git
  
-## 8. Create a branch "development_<yourname>".
+ 
+## 6. Create branch "development_yourname".
 
-$ git branch development_<yourname>
+In the terminal type:
 
-## 8. Switch to the branch you just created so that any changes you make to `learn_git` repository are restricted to the new branch.
+> git branch development_yourname
 
-$ git checkout development_<yourname>
+## 7. Switch to the new branch 
 
-## 10. Check the status of the repository on your computer. This will tell you what branch is currently checked out, whether that branch is up to date, and whether there are any new files to pull from Github.
+In the terminal type:
 
-$ git status
+> git checkout development_yourname
 
-## 11. Now that the new branch is checked out, create a new text file titled "<yourname>.txt" containing a few lines of text (anything you like). Save the file to the learn_git folder.
+This ensures that any changes you make to the `learn_git` repository are restricted to the new branch.
 
-## 12. Tell git to add the file to the repository.
+## 8. Check the status of the repository on your computer. 
 
-$ git add <yourname>.txt
+In the terminal type:
 
-## 13. Check the status of the repository. You could see something indicating that a new changes is to be committed, specifically the addition of a new file.
+> git status
 
-$ git status
+This will tell you what branch is currently checked out, whether that branch is up to date, and whether there are any new files to pull from Github.
 
-## 14. View the text of the file that is being added. Later, you can use this to view any modifications (additions or subtractions) to existing files.
+## 9. Create a new text file titled "yourname.txt".
+ 
+ The file should contain a few lines of text (anything you like). Save the file to the `learn_git` folder.
 
-$ git diff --cached
+## 10. Add the file to the repository.
 
-## 15. Commit the changes to the new branch.
+In the terminal type:
 
-$ git commit
+> git add <yourname>.txt
+
+## 11. Check the status of the repository.
+
+In the terminal type:
+
+> git status
+
+You should see something indicating that a new change is to be committed, specifically the addition of a new file.
+
+## 12. View the text of the file that is being added. 
+
+In the terminal type:
+
+> git diff --cached
+
+Later, you can use `git diff` to view any modifications (additions or subtractions) to existing files.
+
+## 13. Commit the changes to the new branch.
+
+In the terminal type:
+
+> git commit
 
 You will see an editor pop with a message like this:
 
-$ # Please enter the commit message for your changes. Lines starting
-$ # with '#' will be ignored, and an empty message aborts the commit.
-$ # On branch master
-$ # Your branch is up-to-date with 'origin/master'.
-$ #
-$ # Changes to be committed:
-$ #	new file:   README
-$ #	modified:   CONTRIBUTING.md
+> Please enter the commit message for your changes. Lines starting
+> with '#' will be ignored, and an empty message aborts the commit.
+> On branch master
+> Your branch is up-to-date with 'origin/master'.
+> 
+> Changes to be committed:
+> new file:  yourname.txt
 
 Assuming the editor that pops up is Vim:
+
 i. Type "i" to begin writing out a description commit message (e.g., "added file with random text")
+
 ii. Press `Esc`
+
 iii. Type ":wq" then press `Enter`
 
-## 16. Confirm that your changes have been committed.
+## 14. Confirm that your changes have been committed.
 
-$ git status
+In the terminal type:
 
-## 17. Now, checkout the main branch. This will cause your file to disappear. Don't worry, git will restore it once you checkout the branch you were working on.
+> git status
 
-$ git checkout master
+## 15. Checkout the main branch.
 
-## 18. Confirm that the text file you added previously has disappeared.
+In the terminal type:
 
-## 19. Restore the text file by checking out the development branch again.
+> git checkout master
 
-$ git checkout development_<yourname>
+This will cause your file to disappear from your folder (go ahead and confirm this). 
 
-## 20. Finally, create a "pull request". This will ask the maintainer of the `learn_git` repository to merge your new branch with the main branch on Github.
+Don't worry, git will restore it once you checkout the branch you were working on.
 
-$ git push origin development_<yourname>
+## 16. Restore the text file by checking out the development branch again.
+
+In the terminal type:
+
+> git checkout development_yourname
+
+## 17. Finally, create a "pull request". 
+
+In the terminal type:
+
+> git push origin development_yourname
+
+This will ask the maintainer of the `learn_git` repository to merge your new branch with the main branch on Github.
