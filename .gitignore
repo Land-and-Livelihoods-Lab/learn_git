@@ -1,0 +1,16 @@
+*.RData
+*.DS_Store
+*.DS_store
+*.rds
+*.Rds
+*.Rda
+*.docx
+
+*.toc
+*.synctex.gz
+*.aux
+*.bbl
+*.log
+
+*.ppt
+*.pptx
