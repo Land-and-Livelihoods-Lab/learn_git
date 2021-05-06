@@ -1,31 +1,37 @@
 # Learning git
 
+## Prerequisites 
+
+Choose a text editor and make sure it is installed on your system. 
+
+Text editors are programs that edit files with text in them. Usually they have handy markups, autocomplete, and key-bindings (or shortcuts). Notable editors include: [Emacs](https://www.gnu.org/software/emacs/), [Vim](https://www.vim.org/), and [Nano](https://www.nano-editor.org/).
+
+Most computers will already have at least one of these programs installed (Windows = Vim, macOS = Vim or Emacs).
+
 ### 1. Read the documents below and install git on your computer.
 
-About version control:
+[About version control](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 
-http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
+[Installing git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+[Installing git (Github's guide)](https://github.com/git-guides/install-git)
 
-Installing git:
+All of Chapter 2 (Git basics) of [this guide](http://git-scm.com/book/en/v2)
 
-http://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-https://github.com/git-guides/install-git
-
-All of Chapter 2 - Git basics:
-
-http://git-scm.com/book/en/v2
-
-Basic branching and merging:
-
-http://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+Basic branching and merging from the [same guide](http://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 
 ### 2. Generate SSH key and add it to Github.
 
-Start here:
+See [Github's guide](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+### 3. Open the terminal (macOS, linux) or command prompt (Windows)
 
-### 3. Create a directory for git projects (e.g., "git_projects") and visit in the terminal.
+For macOS, type:
+
+> `CTRL` + `c`
+
+For Windows, search for "Command prompt"
+
+### 4. Create a directory for git projects (e.g., "git_projects") and visit in the terminal.
 
 For Linux:
 
@@ -39,30 +45,30 @@ For Windows:
 
 > cd C:/Users/user/git_projects
 
-### 4. Clone the `learn_git` repository.
+### 5. Clone the `learn_git` repository.
 
 In the terminal type:
 
-> git clone git@github.com:temporalecologylab/learn_git.git
+> git clone git\@github.com:temporalecologylab/learn_git.git
 
 You will not be able to clone this repository until you have uploaded your SSH key to Github.
 
 In the terminal or your OS's file explorer, confirm that git has cloned this repository to your computer.
 
-### 5. In the terminal, switch to `learn_git` folder using "cd" (see step 3).
+### 6. In the terminal, switch to `learn_git` folder using "cd" (see step 3).
 
 For example:
 
-> cd learn_git
+> cd learn\_git
  
  
-### 6. Create branch "development_yourname".
+### 7. Create branch "development_yourname".
 
 In the terminal type:
 
 > git branch development_yourname
 
-### 7. Switch to the new branch 
+### 8. Switch to the new branch.
 
 In the terminal type:
 
@@ -70,7 +76,7 @@ In the terminal type:
 
 This ensures that any changes you make to the `learn_git` repository are restricted to the new branch.
 
-### 8. Check the status of the repository on your computer. 
+### 9. Check the status of the repository on your computer. 
 
 In the terminal type:
 
@@ -78,33 +84,61 @@ In the terminal type:
 
 This will tell you what branch is currently checked out, whether that branch is up to date, and whether there are any new files to pull from Github.
 
-### 9. Create a new text file titled "yourname.txt".
- 
- The file should contain a few lines of text (anything you like). Save the file to the `learn_git` folder.
+You should see a message like:
 
-### 10. Add the file to the repository.
+> On branch development_yourname
+> nothing to commit, working tree clean
+
+### 10. Create a new text file titled "yourname.txt".
+ 
+The file should contain a few lines of text (anything you like). Save the file to the `learn_git` folder.
+
+Now, if you type:
+
+> git status:
+
+you should see a message like:
+
+> On branch development_yourname
+> Untracked files:
+>  (use "git add <file>..." to include in what will be committed)
+>        yourname.txt
+> nothing added to commit but untracked files present (use "git add" to track)
+
+As the message indicates, git knows the new file is there but it hasn't incorporated the file into the new branch yet. 
+
+### 11. Add the file to the branch.
 
 In the terminal type:
 
 > git add yourname.txt
 
-### 11. Check the status of the repository.
+### 12. Check the status of the repository.
 
 In the terminal type:
 
 > git status
 
-You should see something indicating that a new change is to be committed, specifically the addition of a new file.
+You should see a message like:
 
-### 12. View the text of the file that is being added. 
+> On branch development_yourname
+> Changes to be committed:
+>  (use "git restore --staged <file>..." to unstage)
+>        new file:   yourname.txt
+
+This means the new file is ready to be added ("committted") to the new branch.
+
+### 13. View the text of the file that is being added. 
 
 In the terminal type:
 
 > git diff --cached
 
+You should see several different kinds of outputs (not covered here), among them should be the text of the file you added.
+
 Later, you can use `git diff` to view any modifications (additions or subtractions) to existing files.
 
-### 13. Commit the changes to the new branch.
+### 14. Commit the changes to the new branch.
 
 In the terminal type:
 
@@ -114,7 +148,7 @@ You will see an editor pop with a message like this:
 
 > Please enter the commit message for your changes. Lines starting
 > with '#' will be ignored, and an empty message aborts the commit.
-> On branch master
+> On branch development_yourname
 > Your branch is up-to-date with 'origin/master'.
 > 
 > Changes to be committed:
@@ -126,15 +160,22 @@ i. Type "i" to begin writing out a description commit message (e.g., "added file
 
 ii. Press `Esc`
 
-iii. Type ":wq" then press `Enter`
+iii. Type ":wq" then press `Enter` (note: ":wq" means write and quit)
 
-### 14. Confirm that your changes have been committed.
+Note: Vim has different editing modes that are activated by typing certain keys, which is nice for expert users but can be frustrating to first timers. If you get stuck, typing ":q" or ":quit" is often effective for quitting a window.
+
+### 15. Confirm that your changes have been committed.
 
 In the terminal type:
 
 > git status
 
-### 15. Checkout the main branch.
+You should see a message like:
+
+> On branch development_yourname
+> nothing to commit, working tree clean
+
+### 16. Checkout the main branch.
 
 In the terminal type:
 
@@ -144,16 +185,33 @@ This will cause your file to disappear from your folder (go ahead and confirm th
 
 Don't worry, git will restore it once you checkout the branch you were working on.
 
-### 16. Restore the text file by checking out the development branch again.
+### 17. Restore the text file by checking out the development branch again.
 
 In the terminal type:
 
 > git checkout development_yourname
 
-### 17. Finally, create a "pull request". 
+### 18. Finally, create a "pull request". 
 
 In the terminal type:
 
 > git push origin development_yourname
 
-This will ask the maintainer of the `learn_git` repository to merge your new branch with the main branch on Github.
+You should see a message like:
+
+> Counting objects: 3, done.
+> Delta compression using up to 8 threads.
+> Compressing objects: 100% (2/2), done.
+> Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
+> Total 3 (delta 1), reused 0 (delta 0)
+> remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+> remote:
+> remote: Create a pull request for development\_yourname> on GitHub by visiting:
+> remote:
+> https://github.com/temporalecologylab/learn_git/pull/new/development_yourname
+> remote:
+> To github.com:temporalecologylab/learn_git.git
+>  * [new branch]      development_lizzie -> development_lizzie
+
+Visit the web address above to find a pop where you can write out a title and description of the commit and make a pull request. This will ask the maintainer of the `learn_git` repository to merge your new branch with the main branch on Github.
+
