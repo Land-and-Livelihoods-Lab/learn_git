@@ -4,7 +4,9 @@
 
 Choose a text editor and make sure it is installed on your system. 
 
-Text editors are programs that edit files with text in them. Usually they have handy markups, autocomplete, and key-bindings (or shortcuts). Notable editors include: [Emacs](https://www.gnu.org/software/emacs/), [Vim](https://www.vim.org/), and [Nano](https://www.nano-editor.org/).
+Text editors are programs that edit files with text in them. Usually they have handy markups, autocomplete, and key-bindings (or shortcuts). 
+
+Notable editors include: [Emacs](https://www.gnu.org/software/emacs/), [Vim](https://www.vim.org/), and [Nano](https://www.nano-editor.org/).
 
 Most computers will already have at least one of these programs installed (Windows = Vim, macOS = Vim or Emacs).
 
@@ -14,6 +16,7 @@ Most computers will already have at least one of these programs installed (Windo
 [About version control](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 
 [Installing git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
 [Installing git (Github's guide)](https://github.com/git-guides/install-git)
 
 Git basics, Chapter 2 of [this guide](http://git-scm.com/book/en/v2)
@@ -25,11 +28,12 @@ Basic branching and merging from the [same guide](http://git-scm.com/book/en/v2/
 
 See [Github's guide](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-### 3. Open the terminal (macOS, linux) or command prompt (Windows)
+### 3. Open the terminal (macOS, linux) or command prompt (Windows).
 
 For macOS, type:
 
 > `CTRL` + `c`
+
 
 For Windows, search for "Command prompt"
 
@@ -40,9 +44,11 @@ For Linux:
 
 > cd /home/user/git_projects
 
+
 For macOS:
 
 > cd /Users/user/git_projects
+
 
 For Windows:
 
@@ -94,6 +100,7 @@ This will tell you what branch is currently checked out, whether that branch is 
 You should see a message like:
 
 > On branch development_yourname
+
 > nothing to commit, working tree clean
 
 
@@ -109,8 +116,11 @@ you should see a message like:
 
 > On branch development_yourname
 > Untracked files:
+
 >  (use "git add <file>..." to include in what will be committed)
+
 >        yourname.txt
+
 > nothing added to commit but untracked files present (use "git add" to track)
 
 As the message indicates, git knows the new file is there but it hasn't incorporated the file into the new branch yet. 
@@ -132,8 +142,11 @@ In the terminal type:
 You should see a message like:
 
 > On branch development_yourname
+
 > Changes to be committed:
+
 >  (use "git restore --staged <file>..." to unstage)
+
 >        new file:   yourname.txt
 
 This means the new file is ready to be added ("committted") to the new branch.
@@ -159,11 +172,17 @@ In the terminal type:
 You will see an editor pop with a message like this:
 
 > Please enter the commit message for your changes. Lines starting
+
 > with '#' will be ignored, and an empty message aborts the commit.
+
 > On branch development_yourname
+
 > Your branch is up-to-date with 'origin/master'.
+
 > 
+
 > Changes to be committed:
+
 > new file:  yourname.txt
 
 
@@ -187,6 +206,7 @@ In the terminal type:
 You should see a message like:
 
 > On branch development_yourname
+
 > nothing to commit, working tree clean
 
 
@@ -217,18 +237,32 @@ In the terminal type:
 You should see a message like:
 
 > Counting objects: 3, done.
-> Delta compression using up to 8 threads.
-> Compressing objects: 100% (2/2), done.
-> Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
-> Total 3 (delta 1), reused 0 (delta 0)
-> remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-> remote:
-> remote: Create a pull request for development\_yourname> on GitHub by visiting:
-> remote:
-> https://github.com/temporalecologylab/learn_git/pull/new/development_yourname
-> remote:
-> To github.com:temporalecologylab/learn_git.git
->  * [new branch]      development_lizzie -> development_lizzie
 
-Visit the web address above to find a pop where you can write out a title and description of the commit and submit a pull request. This will ask the maintainer of the `learn_git` repository to merge your new branch with the main branch on Github.
+> Delta compression using up to 8 threads.
+
+> Compressing objects: 100% (2/2), done.
+
+> Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
+
+> Total 3 (delta 1), reused 0 (delta 0)
+
+> remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+
+> remote:
+
+> remote: Create a pull request for development\_yourname> on GitHub by visiting:
+
+> remote:
+
+> `https://github.com/temporalecologylab/learn_git/pull/new/development_yourname`
+
+> remote:
+
+> To `github.com:temporalecologylab/learn_git.git`
+
+>  * [new branch]      development_yourname -> development_yourname
+
+Visit the web address above to find a pop where you can write out a title and description of the commit and submit a pull request. 
+
+This will ask the maintainer of the `learn_git` repository to merge your new branch with the main branch on Github.
 
