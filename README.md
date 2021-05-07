@@ -12,17 +12,18 @@ Git basics, Chapter 2 of [this guide](http://git-scm.com/book/en/v2)
 
 Basic branching and merging from the [same guide](http://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 
-#### Optional
+#### Optional reading
 
 [Command line reference](https://files.fosswire.com/2007/08/fwunixref.pdf)
 
 
 ### 2. Generate SSH key and add it to Github.
 
-See [Github's guide for creating an SSH key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+Follow [Github's guide for creating an SSH key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 
-See [Github's guide for adding an SSH key to your account](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
+Follow [Github's guide for adding an SSH key to your account](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
+
 
 ### 3. Open the terminal (Mac, Linux) or command prompt (Windows).
 
