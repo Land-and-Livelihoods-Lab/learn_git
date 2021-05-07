@@ -25,27 +25,19 @@ Follow [Github's guide for creating an SSH key](https://docs.github.com/en/githu
 Follow [Github's guide for adding an SSH key to your account](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
 
 
-### 3. Open the terminal (Mac, Linux) or command prompt (Windows).
+### 3. Open terminal and create a directory for git projects
 
-For Mac, search for the "Terminal" app.
-
-
-For Windows, search for "Command prompt".
-
-
-### 4. Create a directory for git projects (e.g., "git_projects") and visit in the terminal.
-
-For Mac, type:
+For Mac, search and open the "Terminal" application. Once open, type:
 
     cd /Users/user/git_projects
 
 
-For Windows, type:
+For Windows, search and open the "Command prompt" program. Once open, type:
 
     cd C:/Users/user/git_projects
 
 
-### 5. Clone the `learn_git` repository.
+### 4. Clone the `learn_git` repository.
 
 In the terminal type:
 
@@ -56,7 +48,7 @@ You will not be able to clone this repository until you have uploaded your SSH k
 In the terminal or your OS's file explorer, confirm that git has cloned this repository to your computer.
 
 
-### 6. In the terminal, switch to `learn_git` folder (see step 4).
+### 5. In the terminal, switch to `learn_git` folder (see step 4).
 
 For example:
 
@@ -64,14 +56,14 @@ For example:
  
 Note: Depending on your operating system, you may need to add `/` before after the directory name.
 
-### 7. Create branch "development_yourname".
+### 6. Create branch "development_yourname".
 
 In the terminal type:
 
     git branch development_yourname
 
 
-### 8. Switch to the new branch.
+### 7. Switch to the new branch.
 
 In the terminal type:
 
@@ -80,7 +72,7 @@ In the terminal type:
 This ensures that any changes you make to the `learn_git` repository are restricted to the new branch.
 
 
-### 9. Check the status of the repository on your computer. 
+### 8. Check the status of the repository on your computer. 
 
 In the terminal type:
 
@@ -94,7 +86,7 @@ You should see a message like:
     nothing to commit, working tree clean
 
 
-### 10. Create a new text file titled "yourname.txt".
+### 9. Create a new text file titled "yourname.txt".
  
 The file should contain a few lines of text (anything you like). Save the file to the `learn_git` folder.
 
@@ -115,14 +107,14 @@ you should see a message like:
 As the message indicates, git knows the new file is there but it hasn't incorporated the file into the new branch yet. 
 
 
-### 11. Add the file to the branch.
+### 10. Add the file to the branch.
 
 In the terminal type:
 
     git add yourname.txt
 
 
-### 12. Check the status of the repository.
+### 11. Check the status of the repository.
 
 In the terminal type:
 
@@ -139,7 +131,7 @@ You should see a message like:
 This means the new file is ready to be committed to the new branch.
 
 
-### 13. View the text of the file that is being added. 
+### 12. View the text of the file that is being added. 
 
 In the terminal type:
 
@@ -150,7 +142,7 @@ You should see several different kinds of outputs (not covered here), including 
 Later, you can use `git diff` to view any modifications (additions or subtractions) to existing files.
 
 
-### 14. Commit the changes to the new branch.
+### 13. Commit the changes to the new branch.
 
 In the terminal type:
 
@@ -159,7 +151,7 @@ In the terminal type:
 This commits your changes to the `development_yourname` branch (in this case, adding a new file) and the `-m` option adds a brief message describing the change (e.g. "added a file containing random text"). Such messages are essential for keeping track of changes in a repository.
 
 
-### 15. Confirm that your changes have been committed.
+### 14. Confirm that your changes have been committed.
 
 In the terminal type:
 
@@ -171,7 +163,7 @@ You should see a message like:
     nothing to commit, working tree clean
 
 
-### 16. Checkout the main branch.
+### 15. Checkout the main branch.
 
 In the terminal type:
 
@@ -182,14 +174,14 @@ This will cause your file to disappear from your folder (go ahead and confirm th
 Don't worry, git will restore it once you checkout the branch you were working on.
 
 
-### 17. Restore the text file by checking out the development branch again.
+### 16. Restore the text file by checking out the development branch again.
 
 In the terminal type:
 
     git checkout development_yourname
 
 
-### 18. Finally, create a "pull request". 
+### 17. Finally, create a "pull request". 
 
 In the terminal type:
 
@@ -211,7 +203,7 @@ You should see a message like:
     To github.com:temporalecologylab/learn_git.git
     * [new branch]      development_yourname -> development_yourname
 
-Visit the web address above (starting with https) to find a pop up where you can write out a title and description of the commit and submit a pull request. 
+Visit the web address above (starting with https://github.com/temporalecologylab/learn_git/pull) to find a pop up where you can write out a title and description of the commit and submit a pull request. 
 
 This will ask the maintainer of the `learn_git` repository to merge your new branch with the main branch on Github.
 
