@@ -54,7 +54,7 @@ For example:
 
     cd learn_git
  
-Note: Depending on your operating system, you may need to add `/` before after the directory name.
+Note: Depending on your operating system, you may need to add `/` before or after the directory name.
 
 ### 6. Create branch "development_yourname".
 
