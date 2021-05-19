@@ -1,5 +1,7 @@
 # Learning git
 
+## Getting started
+
 ### 1. Read the documents below and install git on your computer.
 
 [About version control](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
@@ -207,3 +209,33 @@ Visit the web address above (starting with https://github.com/temporalecologylab
 
 This will ask the maintainer of the `learn_git` repository to merge your new branch with the main branch on Github.
 
+
+
+
+## Overview of general workflow
+
+When contributing to an existing remote repository hosted on Github, you should first clone the repository to your local computer. To do so, see the example at the top of the page.
+
+Once a repository has been cloned onto your system and you are ready to contribute to it, follow these steps:
+
+### Before starting any work
+
+#### 1. Check status by typing `git status`.
+
+This will tell you what branch is currently checked out on your computer and whether you have made any changes that have not yet been committed. If you have just cloned the repository or have been diligent about committing and pushing changes appropriately, you should see the phrase:
+
+    nothing to commit, working tree clean
+
+If you see something else, for example an untracked file that you have previously added or modified, you should either remove/revert the file (if it is not important) or `git add` the file and make a new commit. Note that making a new commit at this stage might require a special `git merge` later, especially if others have contributed to the repository since then (see below for details).
+
+#### 2. Fetch changes by typing `git fetch`.
+
+This will pull changes *from* Github to your computer, without overwriting your files.
+
+#### 3. View changes by typing `git diff master remotename`.
+
+Replace `remotename` with the name assigned to the Github repository. Typically, `git clone` will choose a name for you. If you do not know the name, type `git branch -a` to view it (`master` is the default name of your local repository).
+
+If the changes are acceptable, then:
+
+#### 4. Update your local repository by typing `git pull`.
