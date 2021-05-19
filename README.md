@@ -251,5 +251,5 @@ Remove the warning message by setting pulls to be "fast-forward" only, with `git
 	
 	git diff branch remotename/branch --stat   # View changes
 		
-	git pull remotename/branch   # Pull changes
+	git pull remotename branch   # Pull changes
 	
