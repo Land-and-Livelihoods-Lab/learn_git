@@ -221,7 +221,7 @@ Once a repository has been cloned to your system and you are ready to contribute
 
 Before doing new work, it is usually a good idea to synchronize your repository with the shared repository on Github. To do so:
 
-#### 1. Check status by typing `git status`.
+#### 1. Check status with `git status`.
 
 This will tell you what branch is currently checked out on your computer and whether you have made any changes that have not yet been committed. If you have just cloned the repository or have been diligent about committing and pushing changes appropriately, you should see the phrase:
 
@@ -229,17 +229,17 @@ This will tell you what branch is currently checked out on your computer and whe
 
 If you see something else, for example an untracked file that you have previously added or modified, you should either remove/revert the file (if it is not important) or `git add` the file and make a new commit. Note that making a new commit at this stage may require a special `git merge`, especially if others have contributed to the repository since the last time you committed (see below for details).
 
-#### 2. Fetch changes by typing `git fetch remotename`.
+#### 2. Fetch changes with  `git fetch remotename`.
 
 This will pull changes *from* Github to your computer, without overwriting your local copy of the repository. Replace `remotename` with the name assigned to the Github repository. By default, `git clone` chooses a name for you. If you do not know the name, type `git remote -v` to view it (name will be in the first column).
 
-#### 3. View any changes by typing `git diff branch remotename/branch --stat`.
+#### 3. View changes with `git diff branch remotename/branch --stat`.
 
 This compares the local `branch` with the remote `branch`. Replace `branch` with whatever branch you are working on (usually `master` or a `development` branch). The argument `--stat` shortens the output, displaying only the file names that have been changed. Remove it to see a more detailed comparison.
 
 If the changes are acceptable, then:
 
-#### 4. Update the local repository with `git pull remotename branch`.
+#### 4. Pull changes with `git pull remotename branch`.
 
 Remove the warning message by setting pulls to be "fast forward" only, with 
 
@@ -247,11 +247,11 @@ Remove the warning message by setting pulls to be "fast forward" only, with
 
 #### Summary
 
-    git status
+    git status   # Check status
 	
-	git fetch remotename
+	git fetch remotename   # Fetch changes
 	
-	(OPTIONAL) git diff branch remotename/branch --stat
+	(OPTIONAL) git diff branch remotename/branch --stat   # View changes
 		
-	git pull remotename/branch
+	git pull remotename/branch   # Pull changes
 	
