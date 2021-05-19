@@ -209,16 +209,17 @@ Visit the web address above (starting with https://github.com/temporalecologylab
 
 This will ask the maintainer of the `learn_git` repository to merge your new branch with the main branch on Github.
 
-
-
+#
 
 ## Overview of general workflow
 
 When contributing to an existing remote repository hosted on Github, you should first clone the repository to your local computer. To do so, see the example at the top of the page.
 
-Once a repository has been cloned onto your system and you are ready to contribute to it, follow these steps:
+Once a repository has been cloned to your system and you are ready to contribute to it, it is recommend you follow these steps:
 
-### Before starting any work
+### Synchronize your repository with Github
+
+Before doing new work, it is usually a good idea to synchronize your repository with the shared repository on Github. To do so:
 
 #### 1. Check status by typing `git status`.
 
@@ -226,16 +227,16 @@ This will tell you what branch is currently checked out on your computer and whe
 
     nothing to commit, working tree clean
 
-If you see something else, for example an untracked file that you have previously added or modified, you should either remove/revert the file (if it is not important) or `git add` the file and make a new commit. Note that making a new commit at this stage might require a special `git merge` later, especially if others have contributed to the repository since then (see below for details).
+If you see something else, for example an untracked file that you have previously added or modified, you should either remove/revert the file (if it is not important) or `git add` the file and make a new commit. Note that making a new commit at this stage may require a special `git merge`, especially if others have contributed to the repository since the last time you committed (see below for details).
 
-#### 2. Fetch changes by typing `git fetch`.
+#### 2. Fetch changes by typing `git fetch remotename`.
 
-This will pull changes *from* Github to your computer, without overwriting your files.
+This will pull changes *from* Github to your computer, without overwriting your local copy of the repository. Replace `remotename` with the name assigned to the Github repository. By default, `git clone` chooses a name for you. If you do not know the name, type `git remote -v` to view it (name will be in the first column).
 
-#### 3. View changes by typing `git diff master remotename`.
+#### 3. View any changes by typing `git diff branch remotename/branch`.
 
-Replace `remotename` with the name assigned to the Github repository. Typically, `git clone` will choose a name for you. If you do not know the name, type `git branch -a` to view it (`master` is the default name of your local repository).
+This compares the local `branch` with the remote `branch`. Replace `branch` with whatever branch you are working on (default branch is `master`).
 
 If the changes are acceptable, then:
 
-#### 4. Update your local repository by typing `git pull`.
+#### 4. Update the local repository with `git pull remotename/branch`.
