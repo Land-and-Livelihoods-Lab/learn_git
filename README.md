@@ -217,7 +217,7 @@ When contributing to an existing remote repository hosted on Github, you should 
 
 Once a repository has been cloned to your system and you are ready to contribute to it, it is recommend you follow these steps:
 
-### Synchronize your repository with Github (Detailed version)
+### Synchronize your repository with Github
 
 Before doing new work, it is usually a good idea to synchronize your repository with the shared repository on Github. To do so:
 
@@ -233,12 +233,25 @@ If you see something else, for example an untracked file that you have previousl
 
 This will pull changes *from* Github to your computer, without overwriting your local copy of the repository. Replace `remotename` with the name assigned to the Github repository. By default, `git clone` chooses a name for you. If you do not know the name, type `git remote -v` to view it (name will be in the first column).
 
-#### 3. View any changes by typing `git diff branch remotename/branch`.
+#### 3. View any changes by typing `git diff branch remotename/branch --stat`.
 
-This compares the local `branch` with the remote `branch`. Replace `branch` with whatever branch you are working on (usually `master` or a `development` branch).
+This compares the local `branch` with the remote `branch`. Replace `branch` with whatever branch you are working on (usually `master` or a `development` branch). The argument `--stat` shortens the output, displaying only the file names that have been changed. Remove it to see a more detailed comparison.
 
 If the changes are acceptable, then:
 
-#### 4. Update the local repository with `git pull remotename/branch`.
+#### 4. Update the local repository with `git pull remotename branch`.
 
-To suppress the warning message, type `git config pull.ff only`.
+Remove the warning message by setting pulls to be "fast forward" only, with 
+
+    git config pull.ff only
+
+#### Summary
+
+    git status
+	
+	git fetch remotename
+	
+	(OPTIONAL) git diff branch remotename/branch --stat
+		
+	git pull remotename/branch
+	
