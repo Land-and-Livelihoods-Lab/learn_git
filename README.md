@@ -217,7 +217,7 @@ When contributing to an existing remote repository hosted on Github, you should 
 
 Once a repository has been cloned to your system and you are ready to contribute to it, it is recommend you follow these steps:
 
-### Synchronize your repository with Github
+### Synchronize your repository with Github (Detailed version)
 
 Before doing new work, it is usually a good idea to synchronize your repository with the shared repository on Github. To do so:
 
@@ -235,8 +235,10 @@ This will pull changes *from* Github to your computer, without overwriting your 
 
 #### 3. View any changes by typing `git diff branch remotename/branch`.
 
-This compares the local `branch` with the remote `branch`. Replace `branch` with whatever branch you are working on (default branch is `master`).
+This compares the local `branch` with the remote `branch`. Replace `branch` with whatever branch you are working on (usually `master` or a `development` branch).
 
 If the changes are acceptable, then:
 
 #### 4. Update the local repository with `git pull remotename/branch`.
+
+To suppress the warning message, type `git config pull.ff only`.
