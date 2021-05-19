@@ -241,9 +241,7 @@ If the changes are acceptable, then:
 
 #### 4. Pull changes with `git pull remotename branch`
 
-Remove the warning message by setting pulls to be "fast forward" only, with 
-
-    git config pull.ff only
+Remove the warning message by setting pulls to be "fast-forward" only, with `git config pull.ff only`.
 
 #### Summary
 
