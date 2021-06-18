@@ -24,11 +24,11 @@ Once a repository has been cloned to your system, consider how you want to contr
 
 In an industry setting, approach **(A)** is usually discouraged to allow for quality control and to avoid excessive merge conflicts arising from many people working on the same code. These reasons are less relevant in an academic research context where groups tend to be smaller, quality control happens differently, and it is less common for multiple people to be working simultaneously on the same file. Thus, while approach **(B)** is recommend, either approach is acceptable.
 
-### (A) Working directly on the main branch
+## Working directly on the main branch
 
 Here it is assumed that you have produced new work that does not conflict with existing work on the repository. In other words, only you have made changes to the relevant file set. If other people have worked on the *same file set* since you last committed to the main branch, there will be a merge conflict and this approach will fail.
 
-#### 1. Check the status of the local repository.
+### 1. Check the status of the local repository.
 
 In the terminal type:
 
@@ -38,7 +38,7 @@ This will tell you what branch is currently checked out on your computer and whe
 
     nothing to commit, working tree clean
 
-#### 2. Fetch changes made to Github repository.
+### 2. Fetch changes made to Github repository.
 
 In the terminal type:
 
@@ -53,25 +53,25 @@ If you do not know the name, type `git remote -v` to view it (name will be in th
 
 This indicates that `github` is the only `remotename` available and that it is currently set as the default *fetch* and *push* location. In other words, you could type `git fetch` and git would interpret this as `git fetch github`. 
 
-#### 3. Optional: View differences between local and remote files.
+### 3. Optional: View differences between local and remote files.
 
 In the terminal type:
 
-`git diff branch remotename/branch --stat`
+`git diff master remotename/master --stat`
 
-This compares the local `branch` with the remote `branch`. Replace `branch` with whatever branch you are working on (usually `master` or a `development` branch). The argument `--stat` shortens the output, displaying only the file names that have been changed. Remove it to see a more detailed comparison.
+This compares the local `master` branch (i.e., main branch ) with the remote `master`. The argument `--stat` shortens the output, displaying only the file names that have been changed. Remove it to see a more detailed comparison.
 
 If the changes are acceptable, then:
 
-#### 4. Pull changes from `remotename`.
+### 4. Pull changes from `remotename`.
 
 In the terminal type:
 
-    git pull remotename branch`
+    git pull remotename master
 
 Remove the warning message by setting pulls to be "fast-forward" only, with `git config pull.ff only`.
 
-#### 5. Stage your changes.
+### 5. Stage your changes.
 
 In the terminal type:
 
@@ -79,7 +79,7 @@ In the terminal type:
 
 Do this for all the new or edited files you have produced.
 
-#### 6. Commit the changes.
+### 6. Commit the changes.
 
 In the terminal type:
 
@@ -91,8 +91,10 @@ In the terminal type:
 
     git push remotename master
 
+#
+#
 
-### Working on main branch - short version
+## Working on main branch - short version
 
     git status   # Check status	
     
