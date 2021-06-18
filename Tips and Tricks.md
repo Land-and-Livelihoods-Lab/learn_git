@@ -2,15 +2,17 @@
 
 If you are just getting started with `git`, begin with [README.md](README.md)
 
-[General Workflow][#General workflow]
+[General workflow](#general-workflow)
 
-[Quick commit - Main branch][#Quick commit - Main branch]
+[Quick commit - Main branch][#Quick-commit-Main branch]
 
-[Quick commit - Other branch][#Quick commit - Other branch]
+[Quick commit - Other branch][#Quick-commit-Other branch]
 
-[When all else fails][#When all else fails]
+[When all else fails](#when-all-else-fails)
 
-## General workflow
+#
+
+# General workflow
 
 When contributing to an existing remote repository hosted on Github, you should first clone the repository to your local computer. To do so, see the example at the top of the page.
 
